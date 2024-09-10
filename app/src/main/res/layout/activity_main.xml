@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_toolbar"/>
+
+    <!-- Input fields -->
+    <EditText
+        android:id="@+id/inputFirst"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/grey"
+        android:hint="Input Angka "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        />
+
+    <EditText
+        android:id="@+id/inputSecond"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/grey"
+        android:hint="Input Angka"
+        app:layout_constraintTop_toBottomOf="@+id/inputFirst"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Result Label -->
+    <TextView
+        android:id="@+id/resultLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasil"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/grey"
+        app:layout_constraintTop_toBottomOf="@+id/inputSecond"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Divider line -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#000000"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/grey"
+        app:layout_constraintTop_toBottomOf="@+id/resultLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Operation buttons -->
+    <GridLayout
+        android:id="@+id/buttonGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:columnCount="4"
+        android:rowCount="1"
+        app:layout_constraintTop_toBottomOf="@+id/resultLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/buttonMultiply"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:text="x"
+            android:textColor="@color/black"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/softblue" />
+
+        <Button
+            android:id="@+id/buttonDivide"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textColor="@color/black"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/softblue" />
+
+        <Button
+            android:id="@+id/buttonSubtract"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/black"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/softblue" />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textColor="@color/black"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="#D6E4FF" />
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
